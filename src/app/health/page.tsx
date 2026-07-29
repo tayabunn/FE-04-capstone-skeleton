@@ -1,4 +1,4 @@
-import { Activity, CheckCircle2, Server, Globe, Clock, ShieldCheck, Database, Cpu } from "lucide-react";
+import { Activity, CheckCircle2, Server, Globe, Clock, ShieldCheck, Database, Cpu, RefreshCw } from "lucide-react";
 import { env } from "@/lib/env";
 import Link from "next/link";
 
@@ -180,6 +180,13 @@ export default async function HealthPage() {
           </div>
 
           <div className="flex items-center gap-3">
+            <a
+              href="/health"
+              className="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 border border-slate-700 transition-colors flex items-center gap-1.5"
+            >
+              <RefreshCw className="w-3.5 h-3.5" />
+              <span>Refresh Page</span>
+            </a>
             <a
               href="/api/health"
               target="_blank"
